@@ -32,7 +32,7 @@ $(document).ready(function inicio(){
   btnConsulta.click(function cons(){  
     $.ajax({
     type:"POST",
-    url:"consultaBD.php",
+    url:"http://rosaisc.260mb.net/consultaBD.php",
     data:"",
     success: consultaDatos
     });
@@ -63,7 +63,7 @@ $(document).ready(function inicio(){
   var valConsulta=$("#valConsulta").val();
     $.ajax({
       type:"POST",
-      url:"consultaBD2.php",
+      url:"http://rosaisc.260mb.net/consultaBD2.php",
       data:"Id="+valConsulta,
       success: consultaEstudiante
     });
@@ -79,7 +79,7 @@ $(document).ready(function inicio(){
   btnConsAct.click(function cargarDat(){  
     $.ajax({
     type:"POST",
-    url:"consultaBD.php",
+    url:"http://rosaisc.260mb.net/consultaBD.php",
     data:"",
     success: cargarDatos
     });
@@ -96,7 +96,7 @@ $(document).ready(function inicio(){
   var Id=parseInt($("#nomActualizar").val());
     $.ajax({
     type:"POST",
-    url:"consultaBD2.php",
+    url:"http://rosaisc.260mb.net/consultaBD2.php",
     data:"Id="+Id,
     success: cargarDatosAct
     });
@@ -133,7 +133,7 @@ $(document).ready(function inicio(){
       }else{
 	$.ajax({
 	  type:"POST",
-	  url:"actualizar.php",
+	  url:"http://rosaisc.260mb.net/actualizar.php",
 	  data:"id="+id+"&nombre="+nombre+"&edad="+edad+"&promedio="+promedio,
 	  success: actualizacion
 	});
@@ -148,7 +148,7 @@ $(document).ready(function inicio(){
    btnConsEliminar.click(function conEliminar(){
     $.ajax({
     type:"POST",
-    url:"consultaBD.php",
+    url:"http://rosaisc.260mb.net/consultaBD.php",
     data:"",
     success: cargarDatosElim
     });
@@ -165,7 +165,7 @@ $(document).ready(function inicio(){
        var IdEliminar=parseInt($("#IdEliminar").val());
       $.ajax({
     type:"POST",
-    url:"eliminar.php",
+    url:"http://rosaisc.260mb.net/eliminar.php",
     data:"Id="+IdEliminar,
     success: Eliminacion
     });
